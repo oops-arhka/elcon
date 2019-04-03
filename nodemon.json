@@ -1,0 +1,7 @@
+{
+  "events": {
+    "restart": "lsof -i tcp:5000",
+    "crash": "lsof -i tcp:5000" 
+  },
+  "delay": "1500"
+}
