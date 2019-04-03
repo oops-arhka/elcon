@@ -19,10 +19,6 @@ export const PAGES = {
     name: "aboutMe",
     path: "/aboutMe"
   },
-  // serviceWant: {
-  //   name: "serviceWant",
-  //   path: "/serviceWant"
-  // },
   serviceGive: {
     name: "serviceGive",
     path: "/serviceGive"
@@ -35,10 +31,6 @@ export const PAGES = {
     name: "meetings",
     path: "/meetings"
   },
-  // personalArea: {
-  //   name: "personalArea",
-  //   path: "/personalArea"
-  // },
   register: {
     name: "register",
     path: "/register"
@@ -48,10 +40,6 @@ export const PAGES = {
     path: "/searchPeople"
   },
   API: {
-    // fetchUser: {
-    //   name: "fetchUser",
-    //   path: "/api/user"
-    // },
     fetchPosts: {
       name: "fetchPosts",
       path: "/api/posts"

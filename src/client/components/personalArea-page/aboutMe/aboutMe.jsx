@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 
-
 export default class AboutMe extends Component {
   constructor(props) {
     super(props);
@@ -13,17 +12,6 @@ export default class AboutMe extends Component {
     handleLineChange = async (e) => {
       await this.setState({ aboutMe: e.target.value });
     };
-
-    // handleLineFETCH = async () => {
-    //     await fetch(PAGES.API.fetchText.path, {
-    //         method: 'POST',
-    //         headers: {
-    //             'Accept': 'application/json',
-    //             'Content-Type': 'application/json'
-    //         },
-    //         body: JSON.stringify({ text: this.state.text })
-    //     });
-    // }
 
     render() {
       return (

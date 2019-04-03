@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 
-
 export default class GeoLocation extends Component {
   constructor(props) {
     super(props);
@@ -14,9 +13,6 @@ export default class GeoLocation extends Component {
     return (
             <div>
                 <h1>Геолокация</h1>
-                <p></p>
-              {/* Галочка ДА - НЕТ */}
-                <p></p>
             </div>
     );
   }

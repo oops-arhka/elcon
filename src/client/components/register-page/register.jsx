@@ -9,7 +9,6 @@ import { fetchRegisterThunkAC } from "../../redux/actions/register-actions";
 const mapStateToProps = state => ({
   email: selectEmail(state),
   password: selectPassword(state)
-  // isRegisterFetching: selectIsRegisterFetching(state)
 });
 
 const mapDispatchToProps = dispatch =>
@@ -26,7 +25,6 @@ class RegisterPage extends Component {
     this.state = {
       email: "",
       password: ""
-      // sequrityQuestion: ""
     };
   }
 
@@ -37,18 +35,6 @@ class RegisterPage extends Component {
     isRegisterFetching: Type.bool,
     fetchRegister: Type.func
   };
-
-  // static defaultProps = {
-  //   Login: "Vasya"
-  // };
-
-  // handleSubmit(event) {
-  //   event.preventDefault();
-  // }
-
-  // handleRegisterClick(event) {
-  //   event.preventDefault();
-  // }
 
   handleEmailChange = event => {
     this.setState({ email: event.target.value });
@@ -68,18 +54,11 @@ class RegisterPage extends Component {
 
   render() {
     return (
-      // <div className="container-fluid bg-light py-3">
       <React.Fragment>
       <div className="row">
         <div className="col-md-6 mx-auto">
           <div className="card card-body">
             <h3 className="text-center mb-4">Sign-up</h3>
-            {/* <div className="alert alert-danger">
-                <a className="close font-weight-light" data-dismiss="alert" href="#">
-                  ×
-                </a>
-                Password is too short.
-              </div> */}
             <fieldset>
               <div className="form-group has-error">
                 <input
@@ -101,36 +80,6 @@ class RegisterPage extends Component {
                   onChange={this.handlePasswordChange}
                 />
               </div>
-              {/* <div className="form-group has-success">
-                <input
-                  className="form-control input-lg"
-                  placeholder="Confirm Password"
-                  name="password"
-                  value={this.state.password}
-                  type="password"
-                  onChange={this.handleUserInfoChange}
-                />
-              </div> */}
-              {/* <div className="form-group">
-                <select className="form-control input-lg">
-                  <option selecterd="">Sequrity Question</option>
-                </select>
-              </div>
-              <div className="form-group">
-                <input
-                  className="form-control input-lg"
-                  placeholder="Sequrity Answer"
-                  name="answer"
-                  value={this.state.sequrityQuestion}
-                  type="text"
-                  onChange={this.handleAnswerChange}
-                />
-              </div> */}
-              {/* <div className="checkbox">
-                <label className="small">
-                  <input name="terms" type="checkbox" />I have read and agree to the <a href="#">terms of service</a>
-                </label>
-              </div> */}
               <input
                 className="btn btn-lg btn-primary btn-block"
                 value="Sign Me Up"

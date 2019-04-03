@@ -26,16 +26,6 @@ const mapStateToProps = state => ({
   isPostsFetching: selectIsPostsFetching(state)
 });
 
-// Alternative Way to map dispatch to props
-// const mapDispatchToProps = dispatch => ({
-//   sayBye: () => dispatch(sayByeAC()),
-//   sayHi: () => dispatch(sayHiAC()),
-//   doRoute: page => dispatch(push(page)),
-//   fetchUserStart: () => dispatch(fetchUserStartAC()),
-//   fetchUserSuccess: user => dispatch(fetchUserSuccessAC(user)),
-//   fetchUserError: () => dispatch(fetchUserErrorAC())
-// });
-
 const mapDispatchToProps = dispatch =>
   bindActionCreators(
     {
@@ -72,11 +62,6 @@ class App extends Component {
     fetchPosts: Type.func
   };
 
-  // static defaultProps = {
-  //   appName: "Default Name",
-  //   posts: []
-  // };
-
   state = {
     buttonActive: false
   };
@@ -112,7 +97,6 @@ class App extends Component {
       fetchUserStart();
       const user = await fetch(PAGES.API.fetchUser.path);
       const userInfo = await user.json();
-      console.log("userInfo", userInfo);
       fetchUserSuccess(userInfo);
     } catch (e) {
       console.error(e);
@@ -124,41 +108,20 @@ class App extends Component {
     this.props.fetchPosts();
   };
 
-  componentDidMount() {
-    // this.fetchUser();
-  }
-
   render() {
     const { appName, children } = this.props;
-    // console.log(this.props);
     return (
       <React.Fragment>
         <nav className="navbar navbar-expand-md fixed-top bg-dark">
-          {/* <div className="collapse navbar-collapse" id="navbarSupportedContent"> */}
           <Link to={PAGES.personalArea.path} className="navbar-brand">Elcon</Link>
             <ul className="navbar-nav mr-auto">
-              {/* <li className="nav-item active">
-                <div className="nav-link" href="#">
-                  <Link to={PAGES.personalArea.path}>Elcon</Link>
-                </div>
-              </li> */}
               <li className="nav-item">
-                {/* <div className="nav-link" href="#"> */}
                   <Link to={PAGES.register.path} className="nav-link">Register Page</Link>
-                {/* </div> */}
               </li>
               <li className="nav-item">
-                {/* <div className="nav-link" href="#"> */}
                   <Link to={PAGES.login.path} className="nav-link">Login Page</Link>
-                {/* </div> */}
               </li>
-              {/* <li className="nav-item">
-                <div className="nav-link" href="#">
-                  <Link to={PAGES.personalArea.path}>Pesonal Page</Link>
-                </div>
-              </li> */}
             </ul>
-          {/* </div> */}
         </nav>
         <div className={cn("header")} />
         {children}

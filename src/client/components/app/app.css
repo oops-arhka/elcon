@@ -1,22 +1,4 @@
 .app {
-  &__header {
-    /* display: flex; */
-    /* flex-direction: row; */
-    /* background-attachment: scroll;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center top;
-    height: 1000px; */
-  }
-  
-  &__main {
-    /* background-image: url("./beach.jpg");
-    height: 100%; */
-    /* background-repeat: no-repeat; */
-    /* background-size: contain; */
-    /* background-position: center; */
-    /* width: 100% */
-  }
 
   &__menu {
     margin-top: 10px;
